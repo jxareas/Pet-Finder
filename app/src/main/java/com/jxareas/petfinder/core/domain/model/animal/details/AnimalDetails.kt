@@ -1,8 +1,8 @@
-package com.jxareas.petfinder.core.domain.model.pet.details
+package com.jxareas.petfinder.core.domain.model.animal.details
 
 import com.jxareas.petfinder.core.domain.model.organization.Organization
 
-data class PetDetails(
+data class AnimalDetails(
     val description: String,
     val age: Age,
     val species: String,

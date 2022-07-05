@@ -1,4 +1,4 @@
-package com.jxareas.petfinder.core.domain.model.pet.details
+package com.jxareas.petfinder.core.domain.model.animal.details
 
 enum class Coat {
     UNKNOWN, SHORT, MEDIUM, LONG, WIRE, HAIRLESS, CURLY

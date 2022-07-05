@@ -1,4 +1,4 @@
-package com.jxareas.petfinder.core.domain.model.pet
+package com.jxareas.petfinder.core.domain.model.animal
 
 data class Media(
     val photos: List<Photo>,
