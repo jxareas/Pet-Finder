@@ -6,7 +6,7 @@ data class Organization(
     val distance: Float,
 ) {
 
-    data class Contact(val email: String, val photo: String, val address: Address)
+    data class Contact(val email: String, val phone: String, val address: Address)
 
     data class Address(
         val address1: String,
