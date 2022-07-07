@@ -8,9 +8,9 @@ import javax.inject.Singleton
 
 
 @Singleton
-class PreferencesImpl @Inject constructor(
+class PetFinderPreferencesImpl @Inject constructor(
     @ApplicationContext context: Context,
-) : Preferences {
+) : PetFinderPreferences {
 
     companion object {
         const val PREFERENCES_NAME = "PET_SAVE_PREFERENCES"

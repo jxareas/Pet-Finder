@@ -1,6 +1,6 @@
 package com.jxareas.petfinder.core.data.settings
 
-interface Preferences {
+interface PetFinderPreferences {
 
     fun putToken(token: String)
 
