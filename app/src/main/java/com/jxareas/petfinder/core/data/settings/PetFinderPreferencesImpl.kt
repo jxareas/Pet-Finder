@@ -42,9 +42,9 @@ class PetFinderPreferencesImpl @Inject constructor(
     override fun getTokenExpirationTime() =
         preferences.getLong(PreferenceConstants.TOKEN_EXPIRATION_TIME, -1)
 
-    override fun putTokenType(token: String) =
+    override fun putTokenType(tokenType: String) =
         edit {
-            putString(PreferenceConstants.TOKEN_TYPE, token)
+            putString(PreferenceConstants.TOKEN_TYPE, tokenType)
         }
 
     override fun getTokenType() =

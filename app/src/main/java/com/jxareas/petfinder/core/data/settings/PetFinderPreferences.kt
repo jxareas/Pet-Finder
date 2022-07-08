@@ -10,7 +10,7 @@ interface PetFinderPreferences {
 
     fun getTokenExpirationTime(): Long
 
-    fun putTokenType(token: String)
+    fun putTokenType(tokenType: String)
 
     fun getTokenType(): String
 

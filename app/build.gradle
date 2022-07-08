@@ -35,6 +35,11 @@ android {
     buildFeatures {
         viewBinding true
     }
+    testOptions {
+        unitTests {
+            includeAndroidResources = true
+        }
+    }
 }
 
 dependencies {
@@ -42,10 +47,23 @@ dependencies {
     // Kotlin Extensions
     implementation "androidx.core:core-ktx:$ktx"
 
+    // Support Testing Dependencies
+    testImplementation "junit:junit:$junit"
+    androidTestImplementation "androidx.test.ext:junit:$junit_androidx"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_androidx"
+
     // Support Libraries
     implementation "androidx.appcompat:appcompat:$appcompat"
     implementation "com.google.android.material:material:$material"
     implementation "androidx.constraintlayout:constraintlayout:$constraint_layout"
+
+    // Testing Libraries
+    testImplementation "org.robolectric:robolectric:$robolectric"
+    testImplementation "com.squareup.okhttp3:mockwebserver:$mockwebserver"
+    testImplementation "org.mockito:mockito-core:$mockito"
+    testImplementation "com.google.truth:truth:$google_truth"
+    androidTestImplementation "com.google.truth:truth:$google_truth"
+    androidTestImplementation "com.squareup.okhttp3:mockwebserver:$mockwebserver"
 
     // Retrofit
     implementation "com.squareup.retrofit2:retrofit:$retrofit"
@@ -58,9 +76,11 @@ dependencies {
     // Moshi
     implementation "com.squareup.moshi:moshi-kotlin:$moshi"
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
-    implementation 'androidx.lifecycle:lifecycle-livedata-ktx:2.4.1'
-    implementation 'androidx.lifecycle:lifecycle-viewmodel-ktx:2.4.1'
     kapt "com.squareup.moshi:moshi-kotlin-codegen:$moshi"
+
+    // Lifecycle Extensions
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycle_ext"
+    implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycle_ext"
 
     // ROOM
     implementation "androidx.room:room-runtime:$room"
@@ -77,16 +97,10 @@ dependencies {
     implementation "com.google.dagger:hilt-android:$dagger_hilt"
     kapt "com.google.dagger:hilt-compiler:$dagger_hilt"
 
-    // Support Testing Dependencies
-    testImplementation "junit:junit:$junit"
-    androidTestImplementation "androidx.test.ext:junit:$junit_androidx"
-    androidTestImplementation "androidx.test.espresso:espresso-core:$espresso_androidx"
-
-    // Threetenabp
+    // Three Ten Android Backport
     implementation "com.jakewharton.threetenabp:threetenabp:$threetenabp"
 
     // Leak Canary
     debugImplementation "com.squareup.leakcanary:leakcanary-android:$leak_canary"
-
 
 }
